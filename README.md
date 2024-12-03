@@ -6,7 +6,7 @@
 
 | 模型| 单位 | 时间 | 地址 |
 | --- | --- | --- |  --- |
-| Mono-InternVL | 上海人工智能实验室 | 2024 | https://arxiv.org/abs/2409.20566 |
+| Mono-InternVL | 上海人工智能实验室 | 2024 | https://huggingface.co/OpenGVLab/Mono-InternVL-2B |
 | jina-clip-v2 | jina-ai | 2024 | https://huggingface.co/jinaai/jina-clip-v2 |
 
 
