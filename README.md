@@ -22,7 +22,7 @@ API快速上手使用： https://jina.ai/?sui=&model=jina-clip-v2
 - 性能提升：v2 在文本-图像和文本-文本检索任务中，性能较 v1 提升了 3%。此外，与 v1 类似，v2 的文本编码器也能高效地应用于多语言长文本密集检索索，其性能可与我们目前最先进的模型 —— 参数量低于 1B 的最佳多语言向量模型 jina-embeddings-v3（基于 MTEB 排行榜）—— 相媲美。
 
 - 多语言支持：以 jina-embeddings-v3 作为文本塔，jina-clip-v2 支持 89 种语言的多语言图像检索，并在该任务上的性能相比 nllb-clip-large-siglip 提升了 4%。
-- 
+
 Jina CLIP v2 支持 89 种语言，在包括中文、英语、法语、德语、日语、俄语、阿拉伯语和西班牙语在内的主要语种中都表现优异。
 
 在多语言图像检索基准测试中，8.65 亿参数的jina-clip-v2 的性能比目前最先进的 CLIP 模型 NLLB-CLIP-SigLIP 相当甚至更好。
