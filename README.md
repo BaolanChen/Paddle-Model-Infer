@@ -17,6 +17,8 @@
 
 API快速上手使用： https://jina.ai/?sui=&model=jina-clip-v2
 
+模型权重下载地址：https://huggingface.co/jinaai/jina-clip-v2
+
 ### jina-clip-v2模型结构
 
 ![image](https://github.com/user-attachments/assets/acf024e1-55e3-4c09-b569-94c77b78527c)
@@ -33,6 +35,28 @@ Jina CLIP v2 支持 89 种语言，在包括中文、英语、法语、德语、
 在多语言图像检索基准测试中，8.65 亿参数的jina-clip-v2 的性能比目前最先进的 CLIP 模型 NLLB-CLIP-SigLIP 相当甚至更好。
 
 Jina CLIP v2 的参数量介于 NLLB-CLIP-SigLIP 的两个版本之间：其 base 版本参数量为 5.07 亿，比 Jina CLIP v2 小 41%，large 版本参数量则高达 12 亿，比 Jina CLIP v2 大 39%。
+
+
+**jina-clip-v2 is a general-purpose multilingual multimodal embedding model for text & images.**
+
+Multimodal embeddings enable searching and understanding data across different modalities through a coherent representation. They serve as the backbone of neural information retrieval and multimodal GenAI applications.
+
+Built upon jina-clip-v1 and our recently released jina-embeddings-v3, jina-clip-v2 features several significant improvements:
+
+- **Improved Performance:** v2 shows a 3% performance improvement over v1 in both text-image and text-text retrieval tasks. 
+Similar to v1, v2's text encoder can serve as an effective multilingual long-context dense retriever. 
+It performs on par with our frontier model jina-embeddings-v3 (currently the best multilingual embeddings under 1B parameters on MTEB).
+- **Multilingual Support:** Using the same backbone as jina-embeddings-v3 for the text tower, jina-clip-v2 supports 89 languages for multilingual-image retrieval, 
+showing up to 4% improvement compared to nllb-clip-large-siglip on multilingual image retrieval tasks.
+- **Higher Image Resolution:** v2 now supports 512x512 input image resolution, a significant increase from v1's 224x224. 
+This higher resolution enables better processing of detailed images, improved feature extraction, and more accurate recognition of fine-grained visual elements.
+- **Matryoshka Representations:** v2 allows users to truncate the output dimensions of both text and image embeddings from 1024 down to 64, 
+reducing storage and processing overhead while maintaining strong performance.
+
+Measuring 0.9B parameters, jina-clip-v2 combines two powerful encoders:
+
+the text encoder Jina-XLM-RoBERTa (the backbone of jina-embeddings-v3) and
+the vision encoder EVA02-L14 (an efficient vision Transformer developed by BAAI).
 
 ### 通过 API 调用
 调用我们的 API 最快最简单的上手方式，你只需发送一段文本、一张图片（Base64 编码或图片链接），并指定向量维度即可（默认为 1024 维，下面示例中使用了 768 维）。 
