@@ -17,6 +17,8 @@
 
 API快速上手使用： https://jina.ai/?sui=&model=jina-clip-v2
 
+模型权重下载地址：https://huggingface.co/jinaai/jina-clip-v2
+
 ### jina-clip-v2模型结构
 
 ![image](https://github.com/user-attachments/assets/acf024e1-55e3-4c09-b569-94c77b78527c)
